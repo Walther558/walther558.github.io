@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://walther558.github.io</id>
     <title>558&apos;s blog</title>
-    <updated>2020-11-25T07:33:05.661Z</updated>
+    <updated>2020-11-25T07:52:00.768Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://walther558.github.io"/>
     <link rel="self" href="https://walther558.github.io/atom.xml"/>
@@ -11,45 +11,86 @@
     <icon>https://walther558.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 558&apos;s blog</rights>
     <entry>
-        <title type="html"><![CDATA[558's blog]]></title>
-        <id>https://walther558.github.io/post/558blog/</id>
-        <link href="https://walther558.github.io/post/558blog/">
+        <title type="html"><![CDATA[简单的函数调用与二维数组应用]]></title>
+        <id>https://walther558.github.io/post/jian-dan-de-han-shu-diao-yong-yu-er-wei-shu-zu-ying-yong/</id>
+        <link href="https://walther558.github.io/post/jian-dan-de-han-shu-diao-yong-yu-er-wei-shu-zu-ying-yong/">
         </link>
-        <updated>2020-11-24T08:46:36.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://walther558.github.io/post-images/1606207664580.png" alt="" loading="lazy"></figure>
-<p>😄<a href="https://user.qzone.qq.com/1649444845/">QQ空间</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://walther558.github.io/post/hello-gridea/</id>
-        <link href="https://walther558.github.io/post/hello-gridea/">
-        </link>
-        <updated>2020-11-24T08:42:56.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <updated>2020-11-25T07:46:50.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>编写一个程序，使用一个二维数组来存储一年中每月的最高和最低温度。程序应该输出该年的平均最高温度、平均最低温度以及该年的最高温度和最低温度。程序必须包含下面的函数：<br>
+A．	函数getData（）：该函数将数据读入并存储到二维数组中。<br>
+B．	函数averageHigh():该函数计算并返回该年的平均高温。<br>
+C．	函数averageLow（）：该函数计算并返回该年的平均低温。<br>
+D．	函数indexHighTemp（）：该函数返回数组中最高温度的下标。<br>
+E．	函数indexLowTemp（）：该函数返回数组中最低温度的下标。</strong></p>
+<p>代码正文：<br>
+int main()<br>
+{<br>
+float temper[2][12];<br>
+void getData(float temper[2][12]);<br>
+float averageHigh(float temper[2][12]);<br>
+float averageLow(float temper[2][12]);<br>
+float indexHighTemp(float temper[2][12]);<br>
+float indexLowTemp(float temper[2][12]);<br>
+cout &lt;&lt; &quot;第一行输入每个月的最高气温，第二行输入每个月的最低气温&quot; &lt;&lt; endl ;<br>
+getData(temper);<br>
+cout &lt;&lt; &quot;每个月的最高气温平均值为&quot; &lt;&lt; averageHigh(temper) &lt;&lt; endl;<br>
+cout &lt;&lt; &quot;每个月的最低气温平均值为&quot; &lt;&lt; averageLow(temper) &lt;&lt; endl;<br>
+cout &lt;&lt; &quot;最高温度的下标为&quot; &lt;&lt; indexHighTemp(temper) &lt;&lt; endl;<br>
+cout &lt;&lt; &quot;最低温度的下标为&quot; &lt;&lt; indexLowTemp(temper) &lt;&lt; endl;<br>
+return 0;</p>
+<p>}</p>
+<p>void getData(float temper[2][12])<br>
+{<br>
+for (int i = 0; i &lt; 2; i++)<br>
+{<br>
+for (int k = 0; k &lt; 12; k++)<br>
+cin &gt;&gt; temper[i][k];<br>
+}<br>
+}</p>
+<p>float averageHigh(float temper[2][12])<br>
+{<br>
+float sum = 0;<br>
+for (int i = 0; i &lt; 12; i++)<br>
+sum += temper[0][i];<br>
+float avg = sum / 12;<br>
+return avg;<br>
+}</p>
+<p>float averageLow(float temper[2][12])<br>
+{<br>
+float sum = 0;<br>
+for (int i = 0; i &lt; 12; i++)<br>
+sum += temper[1][i];<br>
+float avg = sum / 12;<br>
+return avg;<br>
+}</p>
+<p>float indexHighTemp(float temper[2][12])<br>
+{<br>
+float max = 1.0;<br>
+int s;<br>
+for (int i = 0; i &lt; 12; i++)<br>
+{<br>
+if (max &lt; temper[0][i])<br>
+{<br>
+max = temper[0][i];<br>
+s = i;<br>
+}<br>
+}<br>
+return s;<br>
+}</p>
+<p>float indexLowTemp(float temper[2][12])<br>
+{<br>
+float min = 100;<br>
+int s;<br>
+for (int i = 0; i &lt; 12; i++)<br>
+{<br>
+if (min &gt; temper[1][i])<br>
+{<br>
+min = temper[1][i];<br>
+s = i;<br>
+}<br>
+}<br>
+return s;<br>
+}</p>
 ]]></content>
     </entry>
 </feed>

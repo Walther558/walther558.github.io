@@ -2,24 +2,19 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | 558&#39;s blog</title>
+<title>简单的函数调用与二维数组应用 | 558&#39;s blog</title>
 <link rel="shortcut icon" href="https://walther558.github.io/favicon.ico?v=1606290716663">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://walther558.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | 558&#39;s blog - Atom Feed" href="https://walther558.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="简单的函数调用与二维数组应用 | 558&#39;s blog - Atom Feed" href="https://walther558.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="欢迎来到我的小站呀，很高兴遇见你！🤝
-🏠 关于本站
-一个由Github搭建的静态博客
-👨‍💻 博主是谁
-Walther558
-⛹ 兴趣爱好
-steam游戏💻💻，ID：Wa1ThER 558
-骑行🚴‍♀🚴‍♀，Garmin I..." />
-    <meta name="keywords" content="" />
+    <meta name="description" content="编写一个程序，使用一个二维数组来存储一年中每月的最高和最低温度。程序应该输出该年的平均最高温度、平均最低温度以及该年的最高温度和最低温度。程序必须包含下面的函数：
+A．	函数getData（）：该函数将数据读入并存储到二维数组中。
+B．	函..." />
+    <meta name="keywords" content="C++" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -75,46 +70,103 @@ steam游戏💻💻，ID：Wa1ThER 558
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              简单的函数调用与二维数组应用
             </h2>
             <div class="post-info">
               <span>
-                2019-01-23
+                2020-11-25
               </span>
               <span>
-                1 min read
+                3 min read
               </span>
+              
+                <a href="https://walther558.github.io/tag/FADaLeNmE/" class="post-tag">
+                  # C++
+                </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://walther558.github.io/post-images/about.jpg" alt="">
-            
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>一个由Github搭建的静态博客</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>Walther558</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>steam游戏💻💻，ID：Wa1ThER 558<br>
-骑行🚴‍♀🚴‍♀，Garmin ID：Walther558</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>QQ 1649444845</p>
+                <p><strong>编写一个程序，使用一个二维数组来存储一年中每月的最高和最低温度。程序应该输出该年的平均最高温度、平均最低温度以及该年的最高温度和最低温度。程序必须包含下面的函数：<br>
+A．	函数getData（）：该函数将数据读入并存储到二维数组中。<br>
+B．	函数averageHigh():该函数计算并返回该年的平均高温。<br>
+C．	函数averageLow（）：该函数计算并返回该年的平均低温。<br>
+D．	函数indexHighTemp（）：该函数返回数组中最高温度的下标。<br>
+E．	函数indexLowTemp（）：该函数返回数组中最低温度的下标。</strong></p>
+<p>代码正文：<br>
+int main()<br>
+{<br>
+float temper[2][12];<br>
+void getData(float temper[2][12]);<br>
+float averageHigh(float temper[2][12]);<br>
+float averageLow(float temper[2][12]);<br>
+float indexHighTemp(float temper[2][12]);<br>
+float indexLowTemp(float temper[2][12]);<br>
+cout &lt;&lt; &quot;第一行输入每个月的最高气温，第二行输入每个月的最低气温&quot; &lt;&lt; endl ;<br>
+getData(temper);<br>
+cout &lt;&lt; &quot;每个月的最高气温平均值为&quot; &lt;&lt; averageHigh(temper) &lt;&lt; endl;<br>
+cout &lt;&lt; &quot;每个月的最低气温平均值为&quot; &lt;&lt; averageLow(temper) &lt;&lt; endl;<br>
+cout &lt;&lt; &quot;最高温度的下标为&quot; &lt;&lt; indexHighTemp(temper) &lt;&lt; endl;<br>
+cout &lt;&lt; &quot;最低温度的下标为&quot; &lt;&lt; indexLowTemp(temper) &lt;&lt; endl;<br>
+return 0;</p>
+<p>}</p>
+<p>void getData(float temper[2][12])<br>
+{<br>
+for (int i = 0; i &lt; 2; i++)<br>
+{<br>
+for (int k = 0; k &lt; 12; k++)<br>
+cin &gt;&gt; temper[i][k];<br>
+}<br>
+}</p>
+<p>float averageHigh(float temper[2][12])<br>
+{<br>
+float sum = 0;<br>
+for (int i = 0; i &lt; 12; i++)<br>
+sum += temper[0][i];<br>
+float avg = sum / 12;<br>
+return avg;<br>
+}</p>
+<p>float averageLow(float temper[2][12])<br>
+{<br>
+float sum = 0;<br>
+for (int i = 0; i &lt; 12; i++)<br>
+sum += temper[1][i];<br>
+float avg = sum / 12;<br>
+return avg;<br>
+}</p>
+<p>float indexHighTemp(float temper[2][12])<br>
+{<br>
+float max = 1.0;<br>
+int s;<br>
+for (int i = 0; i &lt; 12; i++)<br>
+{<br>
+if (max &lt; temper[0][i])<br>
+{<br>
+max = temper[0][i];<br>
+s = i;<br>
+}<br>
+}<br>
+return s;<br>
+}</p>
+<p>float indexLowTemp(float temper[2][12])<br>
+{<br>
+float min = 100;<br>
+int s;<br>
+for (int i = 0; i &lt; 12; i++)<br>
+{<br>
+if (min &gt; temper[1][i])<br>
+{<br>
+min = temper[1][i];<br>
+s = i;<br>
+}<br>
+}<br>
+return s;<br>
+}</p>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
